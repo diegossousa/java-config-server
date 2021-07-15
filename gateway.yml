@@ -19,7 +19,7 @@ spring:
           lower-case-service-id: true
       routes:
       - id: person-api
-        uri: http://localhost:8081
+        uri: http://PERSON-API
         predicates:
         - Path=/people/**
 #spring.cloud.gateway.routes.id=person-api
