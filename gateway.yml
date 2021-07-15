@@ -17,11 +17,11 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
-      routes: 
-        - id: person-api
-          uri: http://localhost:8081
-          predicates:
-            - Path=/people/**
+      routes:
+      - id: person-api
+        uri: http://localhost:8081
+        predicates:
+        - Path=/people/**
 #spring.cloud.gateway.routes.id=person-api
 #spring.cloud.gateway.routes.uri=http://localhost:8081/api/v1/device
 #spring.cloud.gateway.routes.predicates=Path=/device/**
