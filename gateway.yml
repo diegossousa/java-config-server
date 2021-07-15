@@ -29,7 +29,7 @@ spring:
 #  endpoints:
 #    web:
 #      exposure:
-#        include: "*"
+#        include: "*" # Habilita vários paths para check status do servidor
 #spring.cloud.gateway.routes.id=person-api
 #spring.cloud.gateway.routes.uri=http://localhost:8081/api/v1/device
 #spring.cloud.gateway.routes.predicates=Path=/device/**
