@@ -24,6 +24,12 @@ spring:
           uri: lb://PERSON-API
           predicates:
             - Path=/people/**
+            
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*'
 #spring.cloud.gateway.routes.id=person-api
 #spring.cloud.gateway.routes.uri=http://localhost:8081/api/v1/device
 #spring.cloud.gateway.routes.predicates=Path=/device/**
