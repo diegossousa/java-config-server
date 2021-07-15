@@ -7,8 +7,8 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
-  server:
-    wait-time-in-ms-when-sync-empty: 3000
+    server:
+      wait-time-in-ms-when-sync-empty: 3000
 
 spring: 
   cloud: 
@@ -19,7 +19,7 @@ spring:
           lower-case-service-id: true
       routes:
       - id: person-api
-        uri: http://PERSON-API
+        uri: lb://PERSON-API
         predicates:
         - Path=/people/**
 #spring.cloud.gateway.routes.id=person-api
