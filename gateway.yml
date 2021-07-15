@@ -21,7 +21,7 @@ spring:
           lower-case-service-id: true
       routes:
         - id: person-api
-          uri: lb://PERSON-API
+          uri: lb://PERSON-API/api/v1/people
           predicates:
             - Path=/people/
             
