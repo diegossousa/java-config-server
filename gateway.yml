@@ -23,7 +23,7 @@ spring:
         - id: person-api
           uri: lb://PERSON-API
           predicates:
-            - Path=/people/**
+            - Path=/people/
             
 management:
   endpoints:
