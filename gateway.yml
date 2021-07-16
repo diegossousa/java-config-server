@@ -21,10 +21,14 @@ spring:
           lower-case-service-id: true
       routes:
         - id: path_route
-          #uri: lb://PERSON-API
-          uri: http://localhost:8081/api/v1/people
+          uri: lb://PERSON-API
+          #uri: http://localhost:8081/api/v1/people
           predicates:
-            - Path=/people/**
+            - Path=/api/v1/people
+        - id: path_route
+          uri: lb://PERSON-API          
+          predicates:
+            - Path=/api/v1/device
             
 #management:
 #  endpoints:
