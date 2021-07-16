@@ -24,7 +24,7 @@ spring:
           #uri: lb://PERSON-API
           uri: http://localhost:8081/api/v1/people
           predicates:
-            - Path=/people/**
+            - Path=/people/,/**
             
 #management:
 #  endpoints:
