@@ -23,7 +23,7 @@ spring:
         - id: path_route
           uri: lb://PERSON-API
           predicates:
-            - Path=/api/**,/api/**,/api/,/api/v1/,/api/v1/device/,/api/v1/people/
+            - Path=/**,/api/**,/api/**,/api/,/api/v1/,/api/v1/device/,/api/v1/people/
             
 #management:
 #  endpoints:
