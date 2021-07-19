@@ -11,7 +11,7 @@ eureka:
       wait-time-in-ms-when-sync-empty: 3000
 
 spring:
-  appliation:
+  application:
     name: gateway
   cloud: 
     gateway:
