@@ -1,12 +1,12 @@
 eureka:
   instance:
-    hostname: 192.168.1.9
+    hostname: localhost
     port: 9000
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+      defaultZone: http://192.168.1.9:${eureka.instance.port}/eureka/
     server:
       wait-time-in-ms-when-sync-empty: 3000
 
@@ -19,16 +19,16 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
-      routes:
-        - id: path_route
-          uri: lb://PERSON-API
-          #uri: http://localhost:8081/api/v1/people
-          predicates:
-            - Path=/api/v1/people
-        - id: path_route
-          uri: lb://PERSON-API          
-          predicates:
-            - Path=/**,/*,/,/api/v1/device,/api/v1/device/,/api/v1/device/**,/api/v1/device/*
+#      routes:
+#        - id: path_route
+#          uri: lb://PERSON-API
+#          #uri: http://localhost:8081/api/v1/people
+#          predicates:
+#            - Path=/api/v1/people
+#        - id: path_route
+#          uri: lb://PERSON-API          
+#          predicates:
+#            - Path=/**,/*,/,/api/v1/device,/api/v1/device/,/api/v1/device/**,/api/v1/device/*
             
 #management:
 #  endpoints:
