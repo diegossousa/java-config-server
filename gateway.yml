@@ -19,12 +19,11 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
-#      routes:
-#        - id: path_route
-#          uri: lb://PERSON-API
-#          #uri: http://localhost:8081/api/v1/people
-#          predicates:
-#            - Path=/api/v1/people
+      routes:
+        - id: path_route
+          uri: lb://PERSON-API
+          predicates:
+            - Path=/api/v1/people
 #        - id: path_route
 #          uri: lb://PERSON-API          
 #          predicates:
