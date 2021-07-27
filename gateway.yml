@@ -31,6 +31,11 @@ spring:
             allowedMethods:
               - GET
               - POST
+              - OPTIONS
+              - PUT
+              - DELETE
+              - HEADER
+              - UPDATE
     
 #        - id: path_route
 #          uri: lb://PERSON-API          
