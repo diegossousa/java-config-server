@@ -29,7 +29,8 @@ spring:
           '[/**]':
             allowedOrigins: ' * '
             allowedMethods:
-              - GET, POST
+              - GET
+              - POST
     
 #        - id: path_route
 #          uri: lb://PERSON-API          
