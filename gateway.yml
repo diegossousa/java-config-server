@@ -9,11 +9,11 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
     server:
       wait-time-in-ms-when-sync-empty: 3000
-
+      
 spring:
   application:
     name: gateway
-  cloud: 
+  cloud:
     gateway:
       discovery:
         locator:
@@ -24,6 +24,17 @@ spring:
           uri: lb://PERSON-API
           predicates:
             - Path=/api/v1/**
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: '*'
+            allowedMethods:
+              - GET
+              - POST
+              - DELETE
+              - UPDATE
+              - PUT
+    
 #        - id: path_route
 #          uri: lb://PERSON-API          
 #          predicates:
